@@ -4,9 +4,12 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Hello World from .NET 7</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    <hr />
-    <div>Host operating system: @Model.OSVersion</div>
+<div #!/bin/bash
+apt-get update -y
+apt-get upgrade -y
+apt-get install apache2 -y
+systemctl start apache2
+systemctl enable — now apache2
+INSTANCE="`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`"
+sudo sed -i 's/works/works - Server: '"$HOSTNAME"' - '"$INSTANCE"'/g' /var/www/html/index.html
 </div>
