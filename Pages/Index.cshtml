@@ -4,12 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<div #!/bin/bash
-apt-get update -y
-apt-get upgrade -y
-apt-get install apache2 -y
-systemctl start apache2
-systemctl enable — now apache2
-INSTANCE="`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`"
-sudo sed -i 's/works/works - Server: '"$HOSTNAME"' - '"$INSTANCE"'/g' /var/www/html/index.html
+<div class="jumbotron">
+    <h1>.NET 💜 Azure</h1>
+    <p class="lead">Example .NET app to Azure App Service.</p>
 </div>
